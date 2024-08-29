@@ -72,31 +72,32 @@ int main() {
 
 
 /**
-    * Some things that might be handy to remember to learn faster:
-    *
-    * Object-Oriented Programming: C++ is an object-oriented programming language, which means that it allows you to define classes and 
-      objects to model real-world entities and their behavior.
-    * Strong Type System: C++ has a strong type system, which means that variables have a specific type and that type must be respected 
-     in all operations performed on that variable.
-    * Low-level Access: C++ provides low-level access to system resources, which makes it a suitable choice for system programming and 
-     writing efficient code.
-    * Standard Template Library (STL): The STL provides a large set of pre-written algorithms and data structures that can be used to 
-     simplify your code and make it more efficient.
-    * Cross-platform Compatibility: C++ can be compiled and run on multiple platforms, including Windows, MacOS, and Linux, making it a 
-     versatile language for developing cross-platform applications.
-    * Performance: C++ is a compiled language, which means that code is transformed into machine code before it is executed. This can 
-     result in faster execution times and improved performance compared to interpreted languages like Python.
-    * Memory Management: C++ requires manual memory management, which can lead to errors if not done correctly. However, this also provides 
-     more control over the program’s memory usage and can result in more efficient memory usage.
-    * Syntax: C++ has a complex syntax that can be difficult to learn, especially for beginners. However, with practice and experience, 
-     it becomes easier to understand and work with so do not give up!!!
-    *
 
-    * Recommended books
+* Some things that might be handy to remember to learn faster:
+*
+* Object-Oriented Programming: C++ is an object-oriented programming language, which means that it allows you to define classes and 
+objects to model real-world entities and their behavior.
+* Strong Type System: C++ has a strong type system, which means that variables have a specific type and that type must be respected 
+in all operations performed on that variable.
+* Low-level Access: C++ provides low-level access to system resources, which makes it a suitable choice for system programming and 
+writing efficient code.
+* Standard Template Library (STL): The STL provides a large set of pre-written algorithms and data structures that can be used to 
+simplify your code and make it more efficient.
+* Cross-platform Compatibility: C++ can be compiled and run on multiple platforms, including Windows, MacOS, and Linux, making it a 
+versatile language for developing cross-platform applications.
+* Performance: C++ is a compiled language, which means that code is transformed into machine code before it is executed. This can 
+result in faster execution times and improved performance compared to interpreted languages like Python.
+* Memory Management: C++ requires manual memory management, which can lead to errors if not done correctly. However, this also provides 
+more control over the program’s memory usage and can result in more efficient memory usage.
+* Syntax: C++ has a complex syntax that can be difficult to learn, especially for beginners. However, with practice and experience, 
+it becomes easier to understand and work with so do not give up!!!
+*
 
-    “The C++ Programming Language” by Bjarne Stroustrup
-    “Effective C++: 55 Specific Ways to Improve Your Programs and Designs” by Scott Meyers
-    “C++ Primer Plus” by Stephen Prata
-    “C++ For Dummies” by Stephen R. Davis
-    “Data Structures and Algorithm Analysis in C++” by Mark Allen Weiss
+* Recommended books
+
+“The C++ Programming Language” by Bjarne Stroustrup
+“Effective C++: 55 Specific Ways to Improve Your Programs and Designs” by Scott Meyers
+“C++ Primer Plus” by Stephen Prata
+“C++ For Dummies” by Stephen R. Davis
+“Data Structures and Algorithm Analysis in C++” by Mark Allen Weiss
  */
