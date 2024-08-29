@@ -65,9 +65,10 @@ At this stage, your code has been fully compiled into a binary executable, which
 
  * 
 */
-#include <iostream>
-int main() {
-    std::cout<<"Hello World!!!"<< std::endl;
+#include <iostream> // This is a preprocessor directive. The #include directive tells the compiler to include the content of a 
+// file in the source code.
+int main() { // this is our main function and the entry point to our c++ program: more on this down below: a function is a block of code designated to do something very specific.
+    std::cout<<"Hello World!!!"<< std::endl; // This is the line with the instruction to print
 }
 
 

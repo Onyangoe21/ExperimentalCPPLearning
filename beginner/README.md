@@ -20,3 +20,7 @@ It is an object-oriented programming language that implements all the OOPs conce
 It is portable and can be used to create applications that can be adapted to multiple platforms.
 C++ is easy to learn so that you can choose it as your first programming language.
 It makes programming easy for programmers to switch to C++ because its syntax is similar to C, Java, and C#.
+
+## How to use this guide:
+1. Checkout the main code file in a_overview or at least give it a quick glance:
+2. Move onto b_basics and check out the main codefiles or at least give them a quick glance to have an idea what they are trying to introduce.
