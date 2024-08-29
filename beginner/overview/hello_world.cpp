@@ -1,59 +1,68 @@
 /*
  * This portion is written for fun and for those who want to understand what the computer is doing exactly 
- * between command being run to the execution of a c++ program.
+ * between command being run to the execution of a c++ program: Feel free to jump onto the code in the lower sections below:
  * 
- * Your computer is basically robotic motherboard with preloaded code that for simplicity, we will say is the operating system
- * code and so if you use a mac, this code is hardware code written by Macintosh company and continuously runs on your specific 
- * hardware when you turn your computer on: the process of how exactly code can actually run on hardware that's turned on is very
- * long because you would need to understand that at the very basic level, it only matters that most of these components can 
- * store information and some of them are only specifying electric flow patterns. As a result, your computer can have the little 
- * hardware components changing what they do at specific times, keeping instructions, waiting for some time before execution ... 
- * with your computer understaning time using a vibrator that oscilates electrical flow from on to off at specific stable frequency.
- * Ok ok, forget all of that and just know your computer can be complex enough to keep some instructions and the underlying code 
- * can thus tell it when you are typing something in: assuming you type gcc myfile.cpp -- there is a program saying 'hey, this human
- * is tryng to access the instructions kept in a tool called gcc -- gcc comes in to the rescue and takes your file as input.
- *
- * Now that the file with your code has gone in as input, your computer is giving gcc the amount of memory it needs to run given that
- * specific input and all it will need to do is capture the output: gcc -- in this case the compiler -- there are other compilers out
- * there --does something interesting and in a nut shell, it knows that the final output needs to be in machine code as that is the 
- * only sort of output your computer understands and can actually run as 'instructions'. 
- * 
- * To make programming more efficient, the designers of GCC (and C/C++ in general) recognized that certain functionalities are used 
- * very frequently, such as standard input/output operations, mathematical functions, and data structures. To simplify the use of 
- * these common functionalities, they provided pre-written code in the form of libraries. These libraries can be easily included 
- * in a program using the #include directive, which tells the preprocessor to insert the contents of the specified header file 
- * (which declares the functions and data structures) into the source code before compilation: As you can already imagine, however,
- * your computer knows nothing about any existing libraries so the include is replaced: the output can be in .i or .cpp
- * 
- * If you wish to see your hello world program right after the pre-processing -- that's what that step is called, run the command:
- * g++ -E hello_world.cpp -o hello_world_preprocessed.cpp: copy of the output in included here: the instructions expanded at this 
- * level are known us preprocessor directives and here is the full list: include, define, undef, (if,elif,else,endif), (ifdef, ifndef),
- * (error, pragma, line): you can also use define for file name, line number, date and c++ version like: #define __FILE__ and 
- * #define __LINE__, #define __DATE__, #define __TIME__, #define __cplusplus:
- *
- * But that is not the point, that is just to give a clean illustration on why this process might be necessary: for example, the iostream
- * used with #include <iostream> (angle brackets just mean search from the system not the current folder), is replaced with over 50000 lines.
- * you wouldn't want to try implement things like that.
- *
- * After pre-processing, the next intermediate code form is assembly language or some other lower level language: FFT: why don't we want the 
- * non-expanded micros to make it here? Why can't we go straight from code to machine code?
- * 
- * As for why we need the preprocessed code turned into assembly code, assume that one of the major things could be to be able to optimize 
- * the code before feeding it into the machine: to change it to compiled assembly code, run: g++ -S hello_world.i -o hello_world.s: it might 
- * throw a warning regarding c++ output because as you can imagine, how can it tell if you are in C++ or C?
- *  
- * Now it's time to finally get your code to a stage where it can be converted to executable: think of this part as putting your instructions 
- * into binary that the computer understands:  Run: g++ -c hello_world.s -o hello_world.o:
- * 
- * Remember, this binary could still be split up into many sections and thus, we need the linker:
- * Additionally, all c++ programs need an entry point and all you have given now is just the instructions: To dot all the i's and put 
- * everything together, run: g++ hello_world.o -o hello_world: remember, provided your output is the final binary, this command stays the same: 
- * i.e: running to fully compiled biary from your .cpp file is g++ hello_world.cpp -o hello_world
- * 
- * At this stage, unfortunately the code is now in binary and you cannot read it: go ahead and do ./hello_world to run the code.
- * As you start thinking more about the code, remember that your code will always need an entry point and in c++, the smallest unit you can 
- * run is a function. At least main function is required and will act as entry point to your code -- otherwise you simply have some binary 
- * resting in your computer folder but cannot do anything. Have fun!
+
+Your computer is like a smart machine with a motherboard that runs preloaded software, which we can think of as the operating 
+system (OS). If you're using a Mac, this OS is specifically designed by Apple and constantly manages your hardware when you 
+power it on. The way code actually runs on your hardware involves a lot of complex processes, but at the simplest level, it 
+comes down to components that can store information and control the flow of electricity. These components work together, 
+timing their actions precisely, and can keep instructions, delay execution, or react to your inputs. For example, when you 
+type a command like `gcc myfile.cpp`, your computer recognizes this as you trying to use a tool called `gcc`. The `gcc` 
+program then steps in and processes your file as you’ve instructed.
+
+Imagine you're working on a C++ program and you decide to run it using a command like `gcc` in your terminal. When you do this, 
+your computer gets to work behind the scenes. If you're using an IDE like VSCode, it’s doing something similar—it’s just automating 
+those same steps for you. At a basic level, what's happening is that your C++ file is being passed as input to the `gcc` compiler. 
+Your computer allocates the necessary memory for `gcc` to do its job. 
+
+Now, `gcc` is a type of compiler, and its main task is to take the code you wrote and transform it into something your computer 
+can actually understand: machine code. This is the only type of code that your computer’s hardware can execute as instructions. 
+There are other compilers out there too, but they all have the same goal—to turn your high-level code into machine code that can 
+run directly on your computer. In a nutshell, the compiler's job is to bridge the gap between your human-readable code and the 
+binary instructions that your computer can execute.
+
+But what really happens with a C++ compiler like `g++`? When you run your C++ code through `g++`, the compiler takes it through 
+several stages to transform it into something your computer can execute. The first stage is preprocessing, and here’s a bit of 
+background on why that’s important:
+
+To make programming more efficient, the creators of GCC (and C/C++ in general) realized that certain tasks—like handling input/output, 
+performing math operations, or using common data structures—are so frequently needed that it would be tedious for programmers to 
+write them from scratch every time. So, they provided pre-written code for these tasks in the form of libraries. These libraries 
+are brought into your program with the `#include` directive, which tells the preprocessor to insert the contents of the specified 
+header file into your source code before it even starts being compiled.
+
+Now, your computer doesn’t inherently understand what libraries are or where they come from. So, when you include a library, the 
+preprocessor replaces the `#include` line with the actual content of the library's header file, effectively pasting that code into 
+your file. The result of this preprocessing step is a new version of your source file—often with a `.i` or `.cpp` extension—that’s 
+ready for the next stages of compilation.
+
+If you want to see your "Hello World" program right after the preprocessing step—before the actual compilation happens—you can do 
+that by running the command: `g++ -E hello_world.cpp -o hello_world_preprocessed.cpp`. This will give you a version of your code 
+where all the preprocessing work has been done. 
+
+In this preprocessed file, all the `#include` directives and other special instructions have been expanded or resolved. These 
+instructions, known as preprocessor directives, include things like `#include` (for including libraries), `#define` (for defining 
+macros), `#undef` (for undefining macros), and conditional compilation directives like `#if`, `#elif`, `#else`, and `#endif`. 
+You also have `#ifdef` and `#ifndef` for checking if a macro is defined or not, `#error` for generating error messages during 
+preprocessing, `#pragma` for giving special instructions to the compiler, and `#line` for controlling line numbers and filenames 
+in compiler messages.
+
+Additionally, you can use certain predefined macros to include information like the filename, line number, date, time, or C++ 
+version in your code. For example, `__FILE__` will expand to the name of the current file, `__LINE__` to the current line number, 
+`__DATE__` to the date of compilation, `__TIME__` to the time of compilation, and `__cplusplus` to the version of the C++ standard 
+being used. These are powerful tools that the preprocessor handles before your code moves on to the next stages of compilation.
+
+But that's just the beginning—a way to illustrate why preprocessing is so important. Take, for example, the `iostream` library that you     include with `#include <iostream>`. Those angle brackets tell the compiler to look for the file in the system's standard directories,       not in your current folder. That single line pulls in over 50,000 lines of code! Imagine trying to write all of that yourself—clearly,     preprocessing makes things a lot easier.
+
+After preprocessing, the code is transformed into an intermediate form, usually assembly language or another low-level language. You    might wonder, why not just go straight from the original code to machine code? Why do we need to expand macros and include files before this step? One reason is optimization. The compiler needs to see the complete picture—fully expanded and organized—before it can fine-tune the code and generate efficient assembly instructions. If you want to see this stage in action, you can run: `g++ -S hello_world.i -o hello_world.s`. This command might throw a warning about C++ output, which is understandable since the compiler sometimes needs to guess whether it's dealing with C++ or C.
+
+Once you've got your assembly code, it’s time to turn it into machine code, which is the binary code that your computer can actually execute. Think of this as translating your instructions into a language the computer fully understands. You can do this with the command: `g++ -c hello_world.s -o hello_world.o`.
+
+But we're not done yet! The binary code you've created might still be in separate pieces, and it lacks a key component: an entry point. In C++, every program needs an entry point, usually the `main` function. Without it, your code is just a collection of instructions sitting in a folder, unable to do anything. To pull everything together and make your program executable, you run: `g++ hello_world.o -o hello_world`. This command links everything together, finalizing your program. And by the way, if you want to compile your entire program in one go, just run: `g++ hello_world.cpp -o hello_world`.
+
+At this stage, your code has been fully compiled into a binary executable, which means you can't read it anymore—it’s in the computer’s language now. Go ahead and run it with `./hello_world`. And as you work with C++, remember that your code always needs an entry point. The smallest unit you can execute in C++ is a function, and at the very least, you need a `main` function. It serves as the gateway to your program, without which your binary file would just be a set of inactive instructions. So, keep that in mind, and have fun coding!
+
  * 
 */
 #include <iostream>
