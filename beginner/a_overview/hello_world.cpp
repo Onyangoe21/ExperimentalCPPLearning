@@ -88,7 +88,8 @@ language—completely unreadable to us mere humans. But that's okay, because you
 to do is run it with `./hello_world`, and watch the magic happen.
 
 Imagine it like this: you've handed your computer a full list of instructions, starting with where it needs to begin. The 
-computer looks at your instructions and thinks, "Alright, the main function(ENTRY POINT!!) wants me to do task A and task B. To do task A, 
+computer looks at your instructions and thinks, "Alright, the main function(ENTRY POINT!! -- happens that main can be replaced 
+with _start() which is more specifically what is being searched for) wants me to do task A and task B. To do task A, 
 I need to check the special instructions from the standard library—specifically from the iostream section, to figure out how 
 to handle `cin`. Now, `cin` tells me I can’t finish until the user hits 'Enter' on the keyboard. Okay, let’s wait for that 
 input... Got it! Now that’s done, let’s move on to task B. Task B involves a loop at point D, so I’ll need to set up some 
@@ -99,8 +100,9 @@ managing loops, and executing everything just as you wrote it. The entire proces
 almost like magic—but it’s all just your code, running perfectly, step by step.
 
 And as you work with C++, remember that your code always needs an entry point. The smallest unit you can execute in C++ is a 
-function, and at the very least, you need a `main` function. It serves as the gateway to your program, without which your binary 
-file would just be a set of inactive instructions. So, keep that in mind, and have fun coding!
+function, and at the very least, you need a `main` function - you can replace it with _start as shown in the nomain but this 
+is the basic idea. It serves as the gateway to your program, without which your binary file would just be a set of inactive 
+instructions. So, keep that in mind, and have fun coding!
 
  * 
 */
