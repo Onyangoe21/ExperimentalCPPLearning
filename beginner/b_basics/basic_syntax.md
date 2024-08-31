@@ -40,7 +40,11 @@ using namespace std;
 To know more about namespaces in C++, please refer to the article – [Namespaces in C++](#).
 
 ### 3. Main Function
-Functions are basic building blocks of a C++ program that contain instructions for performing specific tasks. Apart from the instructions present in its body, a function definition also contains information about its return type and parameters. To know more about C++ functions, please refer to the article [Functions in C++](#).
+This is all there is to know about syntax of functions in c++:
+1. Declaration: int add(int a, int b);
+2. Definition: actual implemention is shown below:
+3. Calling the function: int result = add(3, 4);
+4. 
 
 In line #3, we defined the main function as `int main()`. The main function is the most important part of any C++ program. The program execution always starts from the main function. All other functions are called from the main function. In C++, the main function is required to return some value indicating the execution status.
 

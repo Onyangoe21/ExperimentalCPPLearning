@@ -59,7 +59,7 @@ write or even just copy-paste all that yourself—preprocessing makes life a lot
 
 After preprocessing, the code is transformed into an intermediate form, usually assembly language or another low-level language. 
 You might wonder, why not just go straight from the original code to machine code? Why do we need to expand macros and include 
-files before this step? One reason is optimization. The compiler needs to see the complete picture—fully expanded and 
+files before this step? One reason is optimization(this process is covered in detail in intermediate code generation internals). The compiler needs to see the complete picture—fully expanded and 
 organized—before it can fine-tune the code and generate efficient assembly instructions. Doing this sort of thing while trying 
 to replace all the macros could get pretty messy. If you want to see this stage in action, you can run: `g++ -S hello_world.i -o 
 hello_world.s`. This command might throw a warning about C++ output, which is understandable: I mean, how do you expect it to 
