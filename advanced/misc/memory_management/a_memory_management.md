@@ -64,3 +64,5 @@ This section in the computer memory when the function is called once and a frame
 - **What You’ll Find**: Data currently being processed by the CPU, like the results of calculations or addresses of the next instructions to execute.
 - **Example**: When you add two numbers in a program, the CPU might store the result in a register temporarily.
 
+Note: For heap memory new and delete with a few special additions do all the work:
+
