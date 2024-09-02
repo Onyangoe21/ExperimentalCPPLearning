@@ -5,7 +5,7 @@ As you might remember, here are the derived data types:
 - **Arrays**: Collection of elements of the same type.
   - Example: `int arr[5];`
 - **Pointers**: Stores memory addresses.
-  - Example: `int* ptr;`: look at the pointers to learn more in this:
+  - Example: `int* ptr;`: look at the pointers section in intermediate to learn more on this:
 - **References**: Acts as an alias for another variable.
   - Example: `int& ref = var;`: will be tackled at intermediate level:
 - **Functions**: Blocks of code that perform specific tasks.
