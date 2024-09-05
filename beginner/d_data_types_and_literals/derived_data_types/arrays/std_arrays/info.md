@@ -151,6 +151,3 @@ Here’s a quick summary of the most common functions you'll use with `std::arra
 | `fill()`            | Fills the array with the specified value.                 |
 | `swap()`            | Swaps the contents with another array of the same type.   |
 
-### Conclusion
-
-`std::array` is a simple, efficient way to handle fixed-size arrays in C++ while enjoying the added safety and functionality of the Standard Library. It is particularly useful in situations where you know the array size at compile time and do not need dynamic resizing. For dynamic arrays, `std::vector` may be a better option, but `std::array` provides a safer alternative to C-style arrays while maintaining the same memory layout and performance.

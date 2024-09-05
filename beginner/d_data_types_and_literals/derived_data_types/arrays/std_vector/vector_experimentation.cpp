@@ -36,6 +36,10 @@ int main() {
     std::cout << "As usual, this is a dummy experimentation of vectors and it starts with declaration and experimentation: \n";
     
     // From here initialization can happen in many different ways:
+    std::vector<int> test_array = {1,2,3,4,5};
+    for (auto element_pointer = test_array.rbegin(); element_pointer != test_array.rend(); ++element_pointer) {
+        std::cout << "Initialized with a copy list method: " << *element_pointer << ":::";  // Dereferencing the iterator to get the value
+    }
     std::vector<int> int_array_1({1, 2, 3, 4, 5, 6, 7, 8, 9}); // initialization using a list
     std::vector<int> int_array_2(10, 5); // initialization with single value
     std::vector<int> int_array_3(int_array_1); // initialization from another vector
